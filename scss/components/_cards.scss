@@ -1,7 +1,4 @@
 // Component Thẻ (Card)
 .card {
-  border: 1px solid $border-color;
-  padding: 20px;
-  background-color: white;
-  @include box-shadow;
+  @include box-style;
 }
