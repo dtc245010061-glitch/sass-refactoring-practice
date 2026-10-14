@@ -19,3 +19,18 @@ $color-purple: #9933cc;
 $color-blue: #33b5e5;
 $color-dark-blue: #0099cc;
 $color-black: #000000;
+
+// --- Website template (header / navbar / services / footer) ---
+$font-template: 'Arial', sans-serif;
+$color-teal: #1abc9c;
+$color-teal-dark: #16a085;
+$color-orange: #f39c12;
+$color-navbar-bg: #333;
+$color-footer-bg: #2c3e50;
+$color-overlay: rgba(0, 0, 0, 0.5);
+$box-shadow-soft: 0px 0px 10px rgba(0, 0, 0, 0.1);
+$transition-default: 0.3s;
+$z-header-blur: 0;
+$z-header-overlay: 1;
+$z-header-content: 2;
+$z-navbar: 1000;

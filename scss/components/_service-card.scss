@@ -1,0 +1,19 @@
+// Card dịch vụ (hiệu ứng hover phóng to)
+.service-card {
+  background: white;
+  box-shadow: $box-shadow-soft;
+  padding: 20px;
+  border-radius: 10px;
+  @include transition;
+  text-align: center;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+}
