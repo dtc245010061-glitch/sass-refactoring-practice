@@ -12,3 +12,21 @@
   border-radius: 10px;
   box-shadow: $box-shadow-default;
 }
+
+// --- Responsive grid ---
+// Ô lưới với màu nền, chiều rộng và padding-top tuỳ chỉnh
+@mixin grid-cell($bg: $color-white, $width: null, $padding-top: null) {
+  background-color: $bg;
+  border: none;
+  @if $width { width: $width; }
+  @if $padding-top { padding-top: $padding-top; }
+}
+
+// Khối màu xếp bên trong một ô lưới
+@mixin grid-block($height, $margin-bottom: 10px) {
+  background-color: $color-blue;
+  border: none;
+  width: 100%;
+  height: $height;
+  margin-bottom: $margin-bottom;
+}
