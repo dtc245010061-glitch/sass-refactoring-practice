@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+            background-color: #f9f9f9;
+            padding: 25px 35px;
+            max-width: 500px;
+            margin: 30px auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #222;
+        }
+        p {
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        input[type="text"], select {
+            padding: 6px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="button"], input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 9px 22px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        input[type="button"]:hover, input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<form method="get" action="simpleform.html" class="wufoo">
+    <h2>Order Form</h2>
+
+    <p>What would you like to buy?</p>
+    <select name="product">
+        <option value="">A</option>
+        <option value="B">B (+ 0.5$)</option>
+        <option value="C">C (+ 0.5$)</option>
+    </select>
+
+    <p>How many would you like to order?</p>
+    <label><input type="radio" name="rd" value="1"/> 1 - $10</label><br/>
+    <label><input type="radio" name="rd" value="2"/> 2 - $20</label><br/>
+    <label><input type="radio" name="rd" value="3"/> 3 - $25</label><br/>
+
+    <p>Name <span style="color: red">*</span></p>
+    <input type="text" name="firstname" placeholder="FirstName" size="15" required/>
+    <input type="text" name="lastname" placeholder="LastName" size="15" required/>
+
+    <p>Email</p>
+    <input type="text" name="email" size="35" placeholder="example@email.com"/>
+
+    <p>Phone Number</p>
+    <input type="text" name="phone1" size="5" maxlength="3"/> -
+    <input type="text" name="phone2" size="5" maxlength="3"/> -
+    <input type="text" name="phone3" size="5" maxlength="4"/>
+
+    <p><input type="submit" name="btSubmit" value="Submit"/></p>
+</form>
+
+</body>
+</html>
