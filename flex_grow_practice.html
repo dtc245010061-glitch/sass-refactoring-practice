@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS flex-grow Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-card {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            font-size: 17px;
+            color: #1e293b;
+            margin-bottom: 15px;
+        }
+
+        .flex-container {
+            display: flex;
+            background-color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            gap: 10px;
+        }
+
+        .flex-item {
+            background-color: #0284c7;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            /* Mặc định flex-grow = 0 */
+        }
+
+        /* Div thứ 2 được áp dụng flex-grow: 2 để phát triển chiếm khoảng trống vượt trội */
+        .flex-item.grow-special {
+            flex-grow: 2;
+            background-color: #ef4444; /* Màu đỏ nổi bật */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực hành: Thuộc tính flex-grow trong CSS</h1>
+
+    <div class="demo-card">
+        <h2>Vùng chứa gồm 5 Flex Item (Áp dụng flex-grow: 2 lên Item thứ 2)</h2>
+        <p style="margin-bottom: 15px; font-size: 14px; color: #64748b;">
+            Trong khi 4 ô còn lại có <code>flex-grow: 0</code> (giữ nguyên độ rộng vừa đủ nội dung), ô thứ 2 được đặt <code>flex-grow: 2</code> sẽ tự động giãn nở để chiếm toàn bộ phần không gian trống còn lại trong container.
+        </p>
+
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item grow-special">Item 2 (flex-grow: 2)</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

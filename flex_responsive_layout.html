@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố Cục Responsive Bằng CSS Flexbox</title>
+    <link rel="stylesheet" href="css/flex_responsive_layout.css">
+</head>
+<body>
+
+    <div class="site-container">
+        <!-- 1. Header -->
+        <header class="header">
+            <h1>Cổng Thông Tin Đa Phương Tiện</h1>
+            <p>Bố cục xây dựng hoàn toàn bằng CSS Flexbox</p>
+        </header>
+
+        <!-- 2. Navigation -->
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Công nghệ</a></li>
+                <li><a href="#">Kinh doanh</a></li>
+                <li><a href="#">Đời sống</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 3. Main Body: Gồm Sidebar và Content (Flex container) -->
+        <div class="main-body">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Chuyên Mục Nổi Bật</h3>
+                <ul>
+                    <li>• Xu hướng lập trình 2026</li>
+                    <li>• Làm chủ CSS Flexbox toàn diện</li>
+                    <li>• Thiết kế Web Responsive chuẩn SEO</li>
+                    <li>• Tài nguyên Frontend miễn phí</li>
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <h2>Lợi Ích Khi Sử Dụng CSS Flexbox Trong Bố Cục Web</h2>
+                <p>
+                    Flexbox (Flexible Box) mang đến khả năng căn chỉnh, sắp xếp và phân phối không gian giữa các phần tử một cách linh hoạt, ngay cả khi kích thước của chúng chưa xác định trước hoặc thay đổi linh động.
+                </p>
+                <p style="margin-top: 15px;">
+                    Khi kết hợp với Media Queries, việc chuyển đổi từ bố cục đa cột sang bố cục một cột trên các thiết bị di động trở nên dễ dàng và mượt mà hơn bao giờ hết thông qua thuộc tính <code>flex-direction: column</code>.
+                </p>
+            </main>
+        </div>
+
+        <!-- 4. Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 FlexboxPortal. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

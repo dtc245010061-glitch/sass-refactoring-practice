@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS flex-basis Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .demo-card {
+            background: #ffffff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        /* Ví dụ 1: flex-basis với đơn vị px */
+        .flex-px {
+            display: flex;
+            gap: 10px;
+        }
+        .flex-px .item {
+            padding: 15px;
+            background-color: lightblue;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .item-200 { flex-basis: 200px; }
+        .item-100 { flex-basis: 100px; }
+        .item-150 { flex-basis: 150px; }
+
+        /* Ví dụ 2: flex-basis thay đổi theo flex-direction: column */
+        .flex-col {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: 250px;
+            background-color: #f8fafc;
+            padding: 10px;
+            border: 1px dashed #cbd5e1;
+            border-radius: 6px;
+        }
+        .flex-col .item {
+            flex-basis: 60px;
+            padding: 10px;
+            background-color: lightgreen;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* Ví dụ 3: flex-basis với % */
+        .flex-percent {
+            display: flex;
+            gap: 10px;
+        }
+        .flex-percent .item {
+            flex-basis: 50%;
+            padding: 20px;
+            background-color: lightcoral;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* Ví dụ 4: Kết hợp flex-basis với flex-grow */
+        .flex-grow-demo {
+            display: flex;
+            width: 100%;
+            gap: 10px;
+        }
+        .flex-grow-demo .item {
+            padding: 15px;
+            background-color: #fef08a;
+            border: 1px solid #facc15;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+        .grow-1 { flex-basis: 100px; flex-grow: 1; }
+        .grow-2 { flex-basis: 100px; flex-grow: 2; background-color: #fde047; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực hành: Thuộc tính flex-basis trong CSS</h1>
+
+    <!-- Ví dụ 1 -->
+    <div class="demo-card">
+        <h2>1. flex-basis với đơn vị px (ngang)</h2>
+        <div class="flex-px">
+            <div class="item item-200">Item 1 (200px)</div>
+            <div class="item item-100">Item 2 (100px)</div>
+            <div class="item item-150">Item 3 (150px)</div>
+        </div>
+    </div>
+
+    <!-- Ví dụ 2 -->
+    <div class="demo-card">
+        <h2>2. flex-basis với flex-direction: column (dọc)</h2>
+        <div class="flex-col">
+            <div class="item">Item 1 (cao 60px)</div>
+            <div class="item">Item 2 (cao 60px)</div>
+            <div class="item">Item 3 (cao 60px)</div>
+        </div>
+    </div>
+
+    <!-- Ví dụ 3 -->
+    <div class="demo-card">
+        <h2>3. flex-basis với % (mỗi cột 50%)</h2>
+        <div class="flex-percent">
+            <div class="item">Item 1 (50%)</div>
+            <div class="item">Item 2 (50%)</div>
+        </div>
+    </div>
+
+    <!-- Ví dụ 4 -->
+    <div class="demo-card">
+        <h2>4. Kết hợp flex-basis: 100px với flex-grow (Tỉ lệ 1 : 2 : 1)</h2>
+        <div class="flex-grow-demo">
+            <div class="item grow-1">Item 1 (grow: 1)</div>
+            <div class="item grow-2">Item 2 (grow: 2)</div>
+            <div class="item grow-1">Item 3 (grow: 1)</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
