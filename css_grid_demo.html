@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px 20px;
+            color: #334155;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #0f172a;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        /* 1. Demo grid-template-areas: Bố cục hoàn chỉnh trang web */
+        .page-grid {
+            display: grid;
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas:
+                "header  header  header"
+                "menu    main    sidebar"
+                "footer  footer  footer";
+            gap: 12px;
+            min-height: 380px;
+        }
+
+        .area-header {
+            grid-area: header;
+            background-color: #38bdf8;
+            color: #ffffff;
+            padding: 20px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .area-menu {
+            grid-area: menu;
+            background-color: #4ade80;
+            color: #065f46;
+            padding: 20px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .area-main {
+            grid-area: main;
+            background-color: #fef08a;
+            color: #854d0e;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .area-sidebar {
+            grid-area: sidebar;
+            background-color: #f87171;
+            color: #ffffff;
+            padding: 20px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .area-footer {
+            grid-area: footer;
+            background-color: #94a3b8;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        /* 2. Demo grid-column & grid-row span */
+        .span-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 90px);
+            gap: 12px;
+        }
+
+        .grid-box {
+            background-color: #e0f2fe;
+            border: 2px solid #38bdf8;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #0284c7;
+        }
+
+        /* Item 1 chiếm 2 cột đầu tiên */
+        .box-1 {
+            grid-column: 1 / span 2;
+            background-color: #bfdbfe;
+        }
+
+        /* Item 2 chiếm 2 hàng */
+        .box-2 {
+            grid-row: 1 / span 2;
+            background-color: #bbf7d0;
+            color: #15803d;
+            border-color: #4ade80;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực Hành Minh Họa CSS Grid Layout</h1>
+
+    <!-- 1. Bố cục trực quan với grid-template-areas -->
+    <div class="card">
+        <h2>1. Bố Cục Trang Web Bằng <code>grid-template-areas</code></h2>
+        <div class="page-grid">
+            <header class="area-header">HEADER (grid-area: header)</header>
+            <nav class="area-menu">MENU (grid-area: menu)</nav>
+            <main class="area-main">
+                <h3>MAIN CONTENT (grid-area: main)</h3>
+                <p style="margin-top: 10px; font-size: 14px; line-height: 1.5;">
+                    Sử dụng <code>grid-template-areas</code> giúp việc phân chia các vùng Header, Menu, Main, Sidebar, Footer trở nên trực quan, dễ quản lý và dễ responsive mà không cần dùng float hay tính toán phần trăm margin thủ công.
+                </p>
+            </main>
+            <aside class="area-sidebar">SIDEBAR (grid-area: sidebar)</aside>
+            <footer class="area-footer">FOOTER (grid-area: footer)</footer>
+        </div>
+    </div>
+
+    <!-- 2. Ghép ô với grid-column và grid-row -->
+    <div class="card">
+        <h2>2. Ghép Ô Lưới Với <code>grid-column</code> &amp; <code>grid-row</code> (span)</h2>
+        <div class="span-grid">
+            <div class="grid-box box-1">Ô 1 (grid-column: span 2)</div>
+            <div class="grid-box box-2">Ô 2 (grid-row: span 2)</div>
+            <div class="grid-box">Ô 3</div>
+            <div class="grid-box">Ô 4</div>
+            <div class="grid-box">Ô 5</div>
+            <div class="grid-box">Ô 6</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
