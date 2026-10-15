@@ -1,0 +1,145 @@
+/* Reset và thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #38bdf8;
+}
+
+.header p {
+    font-size: 16px;
+    color: #94a3b8;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #334155;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.navbar ul li a {
+    display: block;
+    color: #f1f5f9;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.navbar ul li a:hover {
+    background-color: #0284c7;
+}
+
+/* Main Container (Bố cục 2 cột) */
+.main-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Section bài viết */
+.articles-section {
+    flex: 2.5;
+}
+
+.post {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.post h2 {
+    color: #0f172a;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.post-meta {
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 8px;
+}
+
+/* Aside / Sidebar */
+.sidebar {
+    flex: 1;
+}
+
+.widget {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.widget h3 {
+    font-size: 17px;
+    color: #0f172a;
+    border-bottom: 2px solid #38bdf8;
+    padding-bottom: 8px;
+    margin-bottom: 14px;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.widget ul li a {
+    color: #0284c7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.widget ul li a:hover {
+    text-decoration: underline;
+    color: #0369a1;
+}
+
+/* Footer */
+.footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục với Float và Overflow</title>
+    <link rel="stylesheet" href="css/float_overflow.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <h1>Bố cục trang với float và overflow</h1>
+        
+        <!-- Bố cục 2 cột float -->
+        <div class="container clearfix">
+            <div class="left-column">
+                <h3>Cột Trái (Float Left)</h3>
+                <p>Nội dung ở bên trái chiếm 50% độ rộng của khung chứa, sử dụng thuộc tính <code>float: left</code>.</p>
+            </div>
+            <div class="right-column">
+                <h3>Cột Phải (Float Right)</h3>
+                <p>Nội dung ở bên phải chiếm 50% độ rộng của khung chứa, sử dụng thuộc tính <code>float: right</code>.</p>
+            </div>
+        </div>
+
+        <!-- Khối kiểm tra overflow -->
+        <div class="overflow-section">
+            <h3>Khối Nội Dung Có Thanh Cuộn (Overflow: auto)</h3>
+            <div class="overflow-box">
+                Đây là nội dung rất dài dùng để kiểm tra thuộc tính overflow trong CSS. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
