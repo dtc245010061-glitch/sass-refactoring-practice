@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minh họa CSS Layout: Float, Clear, Overflow & Inline-block</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px 20px;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto; /* Căn giữa khối ngang */
+        }
+
+        .demo-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        h2 {
+            color: #0f172a;
+            font-size: 18px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        /* 1. Float & Clearfix */
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .float-thumb {
+            float: left;
+            width: 140px;
+            height: 100px;
+            margin-right: 18px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        /* 2. Overflow */
+        .overflow-box {
+            width: 100%;
+            height: 110px;
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            border-radius: 6px;
+            overflow-y: auto; /* Tự xuất hiện thanh cuộn dọc khi tràn */
+            background-color: #f8fafc;
+        }
+
+        /* 3. Inline-block Columns */
+        .columns-wrap {
+            text-align: center; /* Căn giữa các inline-block */
+            font-size: 0; /* Khử khoảng trắng mặc định giữa các phần tử inline-block */
+        }
+
+        .col-3 {
+            display: inline-block;
+            width: 31%;
+            margin: 0 1%;
+            padding: 20px 15px;
+            background-color: #e0f2fe;
+            border: 1px solid #bae6fd;
+            border-radius: 6px;
+            font-size: 14px; /* Khôi phục font-size */
+            color: #0369a1;
+            vertical-align: top;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 style="text-align: center; margin-bottom: 25px; color: #1e293b;">Tổng Hợp Thực Hành CSS Layout</h1>
+
+    <!-- 1. Float bọc văn bản & Clearfix -->
+    <div class="demo-card">
+        <h2>1. Bọc văn bản quanh hình ảnh (Float + Clearfix)</h2>
+        <div class="clearfix">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80" alt="Code laptop" class="float-thumb">
+            <p>
+                Thuộc tính <code>float: left</code> giúp hình ảnh trôi dạt về phía bên trái, cho phép đoạn văn bản này tự động quấn quanh sườn phải và bên dưới ảnh một cách tự nhiên. Bọc ngoài bằng lớp <code>.clearfix</code> để ngăn không cho phần tử cha bị xẹp chiều cao.
+            </p>
+        </div>
+    </div>
+
+    <!-- 2. Overflow Auto -->
+    <div class="demo-card">
+        <h2>2. Kiểm soát tràn nội dung (overflow: auto)</h2>
+        <div class="overflow-box">
+            <p><strong>Nội dung dài trong hộp kích thước cố định (height: 110px):</strong></p>
+            <p>Khi sử dụng <code>overflow: auto</code>, thanh cuộn chỉ xuất hiện khi nội dung bên trong thực sự vượt quá giới hạn chiều cao hoặc chiều rộng của khối chứa. Điều này giúp giao diện luôn gọn gàng, tránh bị vỡ khung hoặc che khuất các thành phần khác trên trang web.</p>
+            <p>Dòng văn bản bổ sung để kích hoạt thanh cuộn dọc hoạt động mượt mà...</p>
+        </div>
+    </div>
+
+    <!-- 3. Bố cục cột bằng display: inline-block -->
+    <div class="demo-card">
+        <h2>3. Bố cục 3 cột (display: inline-block)</h2>
+        <div class="columns-wrap">
+            <div class="col-3">
+                <h3>Cột 1</h3>
+                <p>Thiết lập width: 31%</p>
+            </div>
+            <div class="col-3">
+                <h3>Cột 2</h3>
+                <p>Nằm trên cùng 1 hàng</p>
+            </div>
+            <div class="col-3">
+                <h3>Cột 3</h3>
+                <p>Không cần Flexbox/Grid</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
