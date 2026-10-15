@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typography & F-Pattern Demo</title>
+    <!-- Nhúng Google Fonts: Merriweather (Serif cho Tiêu đề) và Inter (Sans-serif cho Nội dung) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 1. Chọn font dễ đọc, kích thước chuẩn cho web */
+            font-family: 'Inter', sans-serif;
+            font-size: 17px;
+            /* 2. Leading (line-height) chuẩn: 1.6 - 1.7 để mắt nghỉ ngơi */
+            line-height: 1.75;
+            color: #2d3748;
+            background-color: #f7fafc;
+            padding: 40px 20px;
+        }
+
+        .article-container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 50px 45px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* 3. Phối hợp Serif (Tiêu đề) và Sans-serif (Nội dung) tạo tương phản rõ rệt */
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 34px;
+            font-weight: 900;
+            line-height: 1.3;
+            color: #1a202c;
+            margin-bottom: 12px;
+            /* Tinh chỉnh kerning */
+            letter-spacing: -0.5px;
+        }
+
+        .meta-info {
+            font-size: 14px;
+            color: #718096;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        /* 4. Ứng dụng F-Pattern: Đoạn văn đầu tiên chứa thông điệp cốt lõi */
+        .lead-paragraph {
+            font-size: 19px;
+            line-height: 1.6;
+            color: #2b6cb0;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            color: #2d3748;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        /* 5. Điểm dừng mắt cho F-Pattern: Bullet list và in đậm từ khóa */
+        ul.key-points {
+            margin-left: 25px;
+            margin-bottom: 25px;
+        }
+
+        ul.key-points li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #1a202c;
+            font-weight: 600;
+        }
+
+        /* 6. Khối trích dẫn (Blockquote) tạo điểm nghỉ thị giác */
+        blockquote {
+            border-left: 4px solid #3182ce;
+            padding: 15px 20px;
+            background-color: #ebf8ff;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: #2c5282;
+            margin: 25px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <article class="article-container">
+        <!-- Đường ngang thứ nhất của chữ F: Tiêu đề lớn & Lead Paragraph -->
+        <header>
+            <h1>Nghệ Thuật Typography và Bố Cục F-Pattern Trong Thiết Kế Web</h1>
+            <div class="meta-info">Xuất bản: 15/10/2026 • Tác giả: Frontend Specialist • 4 phút đọc</div>
+            <p class="lead-paragraph">
+                Typography không đơn thuần là chọn phông chữ đẹp; đó là khoa học dẫn dắt thị giác giúp người dùng tiếp nhận thông tin dễ dàng và thoải mái nhất.
+            </p>
+        </header>
+
+        <!-- Trục dọc và đường ngang thứ hai của chữ F: Các tiêu đề phụ & từ khóa nổi bật -->
+        <section>
+            <h2>1. Mẫu Đọc Chữ F (F-Pattern) Hoạt Động Như Thế Nào?</h2>
+            <p>
+                Nghiên cứu theo dõi mắt của <strong>Nielsen Norman Group (NNGroup)</strong> chỉ ra rằng người dùng web hiếm khi đọc từng chữ. Thay vào đó, họ quét nội dung theo hình dáng chữ <strong>F</strong>:
+            </p>
+            <ul class="key-points">
+                <li><strong>Quét ngang trên cùng:</strong> Đọc tiêu đề chính và 1-2 câu mở đầu bài viết.</li>
+                <li><strong>Lướt dọc mép trái:</strong> Dõi mắt dọc theo lề trái để tìm kiếm tiêu đề con hoặc điểm nhấn.</li>
+                <li><strong>Quét ngang đoạn thứ hai:</strong> Dừng lại và đọc các dòng có chứa thông tin nổi bật.</li>
+                <li><strong>Cuộn nhanh xuống dưới:</strong> Lướt qua phần còn lại để kết thúc việc quét tin.</li>
+            </ul>
+
+            <blockquote>
+                "Thiết kế tốt là làm cho người đọc không nhận ra họ đang đọc một khối văn bản dài, mà là đang trải nghiệm một dòng chảy thông tin tự nhiên."
+            </blockquote>
+
+            <h2>2. Các Nguyên Tắc Vàng Khi Phối Hợp Chữ (Typography)</h2>
+            <p>
+                Để bài viết vừa trang nhã vừa dễ đọc trên mọi thiết bị:
+            </p>
+            <ul class="key-points">
+                <li><strong>Độ tương phản cao:</strong> Tiêu đề dùng font Serif có chân vững chãi (<em>Merriweather</em>), nội dung dùng Sans-serif hiện đại (<em>Inter</em>).</li>
+                <li><strong>Khoảng cách dòng (line-height):</strong> Thiết lập từ 1.6 đến 1.8 lần kích thước chữ để mắt có không gian nghỉ ngơi giữa các dòng.</li>
+                <li><strong>Tận dụng khoảng trắng:</strong> Khoảng trắng bao quanh giúp tâm trí người đọc tập trung tuyệt đối vào thông điệp cốt lõi.</li>
+            </ul>
+        </section>
+    </article>
+
+</body>
+</html>
