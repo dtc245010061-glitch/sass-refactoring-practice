@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Menu Ngang Dropdown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fa;
+        }
+
+        /* Phân vùng cho trình đơn */
+        #nav-menu {
+            background-color: #2c3e50;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        #nav-menu > ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Phần tử danh sách hàng ngang */
+        #nav-menu > ul > li {
+            position: relative; /* Khung định vị cho dropdown */
+        }
+
+        /* Định dạng liên kết */
+        #nav-menu ul li a {
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 25px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        /* Hover chuyển màu đỏ */
+        #nav-menu ul li:hover > a {
+            background-color: #e74c3c;
+        }
+
+        /* Trình đơn con buông xuống */
+        #nav-menu ul ul {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 180px;
+            background-color: #34495e;
+            list-style: none;
+            visibility: hidden; /* Ẩn mặc định */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 100;
+        }
+
+        #nav-menu ul ul li {
+            width: 100%;
+            border-bottom: 1px solid #2c3e50;
+        }
+
+        #nav-menu ul ul li a {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
+        #nav-menu ul ul li a:hover {
+            background-color: #c0392b;
+        }
+
+        /* Hiển thị khi hover */
+        #nav-menu ul li:hover > ul {
+            visibility: visible;
+        }
+
+        .content {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="nav-menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm &#9662;</a>
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Máy tính bảng</a></li>
+                    <li><a href="#">Laptop & PC</a></li>
+                    <li><a href="#">Phụ kiện chính hãng</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Khóa học &#9662;</a>
+                <ul>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Lập trình SASS</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>Trình Đơn Ngang Thả Xuống (Horizontal Dropdown Menu)</h2>
+        <p style="margin-top: 15px; line-height: 1.6; color: #555;">
+            Di chuyển chuột qua các mục "Sản phẩm" hoặc "Khóa học" để xem danh sách thả xuống mượt mà bằng CSS thuần sử dụng thuộc tính <code>position: relative</code>, <code>position: absolute</code> và <code>visibility: hidden/visible</code>.
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navigation</title>
+    <style>
+        /* Định dạng chung */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Thanh điều hướng sticky */
+        .sticky-menu {
+            position: sticky;
+            top: 0;
+            background-color: #333333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .sticky-menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sticky-menu ul li {
+            margin: 0 15px;
+        }
+
+        .sticky-menu ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.2s;
+        }
+
+        .sticky-menu ul li a:hover {
+            background-color: #575757;
+            border-radius: 5px;
+        }
+
+        /* Nội dung các section */
+        section {
+            padding: 100px 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        #home { background-color: #f4f4f4; }
+        #about { background-color: #e2e8f0; }
+        #services { background-color: #cbd5e1; }
+        #contact { background-color: #94a3b8; }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="sticky-menu">
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+    </nav>
+    
+    <section id="home">
+        <h1>Chào mừng đến với trang web của chúng tôi</h1>
+        <p>Hãy cuộn xuống để xem hiệu ứng sticky của thanh menu điều hướng.</p>
+    </section>
+    
+    <section id="about">
+        <h2>Giới thiệu</h2>
+        <p>Thanh điều hướng sẽ "dính" cố định trên đầu trang khi chạm đỉnh màn hình.</p>
+    </section>
+    
+    <section id="services">
+        <h2>Dịch vụ</h2>
+        <p>Cung cấp các giải pháp thiết kế website chuyên nghiệp và hiện đại.</p>
+    </section>
+    
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Email: contact@example.com | Hotline: 0123 456 789</p>
+    </section>
+</body>
+</html>

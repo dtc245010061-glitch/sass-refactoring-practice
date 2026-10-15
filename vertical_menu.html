@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Menu Dọc Dropdown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fa;
+            padding: 40px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        #menu {
+            width: 140px;
+        }
+
+        #menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Phần tử danh sách ngoài */
+        #menu ul li {
+            position: relative; /* Khung định vị cho menu con */
+            width: 140px;
+            height: 35px;
+            padding: 0 20px;
+            background-color: #222222;
+            line-height: 35px;
+            cursor: pointer;
+            border-bottom: 1px solid #333333;
+            transition: background-color 0.2s;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            display: block;
+        }
+
+        /* Hover đổi màu nền */
+        #menu ul li:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Menu con dạng dọc thả sang bên phải */
+        #menu ul ul {
+            position: absolute;
+            top: 0;
+            left: 140px; /* Xuất hiện cạnh menu cha */
+            visibility: hidden;
+            width: 150px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #menu ul ul li {
+            width: 150px;
+            background-color: #333333;
+        }
+
+        #menu ul ul li:hover {
+            background-color: #c0392b;
+        }
+
+        /* Hiển thị menu con khi hover */
+        #menu ul li:hover > ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Trình Đơn Dọc (Vertical Dropdown Menu)</h2>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm &#9656;</a>
+                <ul>
+                    <li><a href="#">Điện thoại</a></li>
+                    <li><a href="#">Laptop</a></li>
+                    <li><a href="#">Máy tính bảng</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ &#9656;</a>
+                <ul>
+                    <li><a href="#">Bảo hành</a></li>
+                    <li><a href="#">Sửa chữa</a></li>
+                    <li><a href="#">Tư vấn</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
