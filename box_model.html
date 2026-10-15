@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng Box Model trong CSS</title>
+    <link rel="stylesheet" href="css/box_model.css">
+</head>
+<body>
+    <h1>Bài tập: Mô hình hộp (Box Model) & Box Sizing</h1>
+    <p class="subtitle">So sánh trực quan giữa <code>content-box</code> và <code>border-box</code></p>
+
+    <div class="cards-container">
+        <!-- Thẻ 1: content-box -->
+        <div class="card">
+            <h3>Thẻ 1: content-box</h3>
+            <p>Width: 280px + Padding: 40px + Border: 10px = <strong>Tổng rộng: 330px</strong>.</p>
+        </div>
+
+        <!-- Thẻ 2: border-box -->
+        <div class="card">
+            <h3>Thẻ 2: border-box</h3>
+            <p>Padding và border nằm bên trong. <strong>Tổng rộng đúng 280px</strong>.</p>
+        </div>
+
+        <!-- Thẻ 3: border-box -->
+        <div class="card">
+            <h3>Thẻ 3: border-box</h3>
+            <p>Tương tự thẻ 2, tổng kích thước giữ nguyên <strong>280px x 150px</strong>.</p>
+        </div>
+    </div>
+</body>
+</html>
