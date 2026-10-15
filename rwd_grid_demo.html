@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid View & Media Queries Demo</title>
+    <style>
+        /* 1. Reset & Box Sizing */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Lucida Sans", Arial, sans-serif;
+            background-color: #f1f5f9;
+            color: #334155;
+            padding: 20px;
+        }
+
+        /* 2. Header */
+        .header {
+            background-color: #9933cc;
+            color: #ffffff;
+            padding: 25px 20px;
+            text-align: center;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+
+        /* 3. Row & Clearfix */
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        /* 4. Mobile First: Mặc định trên màn hình nhỏ (< 768px), mọi cột chiếm 100% */
+        [class*="col-"] {
+            float: left;
+            width: 100%;
+            padding: 15px;
+        }
+
+        /* Menu */
+        .menu ul {
+            list-style-type: none;
+        }
+
+        .menu li {
+            padding: 12px;
+            margin-bottom: 8px;
+            background-color: #33b5e5;
+            color: #ffffff;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            transition: background 0.2s;
+        }
+
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+
+        /* Nội dung chính & Aside */
+        .content-box {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+            line-height: 1.6;
+        }
+
+        .content-box h2 {
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .aside-box {
+            background-color: #e0f2fe;
+            border: 1px solid #bae6fd;
+            padding: 20px;
+            border-radius: 6px;
+            color: #0369a1;
+        }
+
+        /* 5. Breakpoint Tablet & Desktop: Khi màn hình >= 768px, áp dụng hệ thống Grid 12 cột */
+        @media only screen and (min-width: 768px) {
+            .col-1 { width: 8.33%; }
+            .col-2 { width: 16.66%; }
+            .col-3 { width: 25%; }
+            .col-4 { width: 33.33%; }
+            .col-5 { width: 41.66%; }
+            .col-6 { width: 50%; }
+            .col-7 { width: 58.33%; }
+            .col-8 { width: 66.66%; }
+            .col-9 { width: 75%; }
+            .col-10 { width: 83.33%; }
+            .col-11 { width: 91.66%; }
+            .col-12 { width: 100%; }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #334155;
+            color: #ffffff;
+            text-align: center;
+            padding: 18px;
+            margin-top: 25px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>Chuyên Mục Responsive Grid View</h1>
+        <p>Co giãn cửa sổ trình duyệt (hoặc bật F12) để quan sát sự chuyển đổi linh hoạt giữa Desktop và Mobile</p>
+    </header>
+
+    <!-- Grid Layout 12 cột -->
+    <div class="row">
+        <!-- Cột Menu: chiếm 3/12 (25%) trên Desktop, 100% trên Mobile -->
+        <aside class="col-3 menu">
+            <ul>
+                <li>Trang chủ</li>
+                <li>Chuyến bay</li>
+                <li>Thành phố</li>
+                <li>Hòn đảo</li>
+                <li>Khách sạn</li>
+            </ul>
+        </aside>
+
+        <!-- Cột Nội dung: chiếm 6/12 (50%) trên Desktop, 100% trên Mobile -->
+        <main class="col-6">
+            <div class="content-box">
+                <h2>Thành Phố Biển</h2>
+                <p>
+                    Responsive Web Design (RWD) giúp website hiển thị tối ưu trên máy tính bảng và điện thoại di động mà không làm mất bố cục.
+                </p>
+                <p style="margin-top: 10px;">
+                    Sử dụng hệ thống 12 cột (Grid View) kết hợp triết lý <strong>Mobile First</strong> giúp tăng tốc độ tải trang, mang lại trải nghiệm người dùng mượt mà và tối ưu thứ hạng tìm kiếm trên Google (SEO).
+                </p>
+            </div>
+        </main>
+
+        <!-- Cột Thông tin phụ: chiếm 3/12 (25%) trên Desktop, 100% trên Mobile -->
+        <aside class="col-3">
+            <div class="aside-box">
+                <h3>Thời Tiết Hôm Nay</h3>
+                <p style="margin-top: 8px;">Nắng nhẹ, nhiệt độ 28°C.</p>
+                <p style="margin-top: 8px;">Độ ẩm: 65%</p>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 Responsive Grid View Demo. Thiết kế chuẩn Mobile First &amp; CSS Grid.
+    </footer>
+
+</body>
+</html>
