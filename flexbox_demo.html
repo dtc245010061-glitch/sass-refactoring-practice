@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox Toàn Diện Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+            padding: 30px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0f172a;
+            margin-bottom: 25px;
+        }
+
+        .demo-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            font-size: 18px;
+            color: #0284c7;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e0f2fe;
+            padding-bottom: 8px;
+        }
+
+        /* 1. Perfect Centering */
+        .perfect-center-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 160px;
+            background-color: #e0f2fe;
+            border: 2px dashed #38bdf8;
+            border-radius: 6px;
+        }
+
+        .center-item {
+            background-color: #0284c7;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+        }
+
+        /* 2. Order & Align-Self */
+        .flex-items-demo {
+            display: flex;
+            height: 180px;
+            background-color: #f1f5f9;
+            border-radius: 6px;
+            padding: 10px;
+            gap: 15px;
+            align-items: flex-start; /* Mặc định các item ở đỉnh */
+        }
+
+        .item-box {
+            padding: 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        /* Item 1 đổi order xuất hiện thứ 2, align-self ở đáy */
+        .item-1 {
+            background-color: #ef4444;
+            order: 2;
+            align-self: flex-end;
+        }
+
+        /* Item 2 đổi order xuất hiện đầu tiên, align-self căn giữa dọc */
+        .item-2 {
+            background-color: #10b981;
+            order: 1;
+            align-self: center;
+        }
+
+        /* Item 3 đổi order xuất hiện thứ 3, giữ nguyên ở đỉnh */
+        .item-3 {
+            background-color: #f59e0b;
+            order: 3;
+            align-self: flex-start;
+        }
+
+        /* 3. Responsive Flexbox: Hàng ngang trên desktop, cột dọc trên mobile */
+        .responsive-flex-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .flex-col {
+            flex: 1;
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            padding: 25px;
+            border-radius: 6px;
+            text-align: center;
+            color: #166534;
+        }
+
+        @media (max-width: 768px) {
+            .responsive-flex-row {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực Hành Tổng Hợp CSS Flexbox</h1>
+
+    <!-- 1. Perfect Centering -->
+    <div class="demo-card">
+        <h2>1. Kỹ Thuật Căn Giữa Hoàn Hảo (Perfect Centering)</h2>
+        <div class="perfect-center-box">
+            <div class="center-item">Căn Giữa Cả Ngang &amp; Dọc</div>
+        </div>
+    </div>
+
+    <!-- 2. Order & Align-Self -->
+    <div class="demo-card">
+        <h2>2. Thứ Tự &amp; Căn Chỉnh Riêng Lẻ (Order &amp; Align-Self)</h2>
+        <div class="flex-items-demo">
+            <div class="item-box item-1">HTML: 1<br>(order: 2, align-self: flex-end)</div>
+            <div class="item-box item-2">HTML: 2<br>(order: 1, align-self: center)</div>
+            <div class="item-box item-3">HTML: 3<br>(order: 3, align-self: flex-start)</div>
+        </div>
+    </div>
+
+    <!-- 3. Responsive Flexbox -->
+    <div class="demo-card">
+        <h2>3. Responsive Flexbox (flex-direction: row &rarr; column)</h2>
+        <div class="responsive-flex-row">
+            <div class="flex-col">
+                <h3>Cột 1</h3>
+                <p>Nằm ngang trên Desktop</p>
+            </div>
+            <div class="flex-col">
+                <h3>Cột 2</h3>
+                <p>Tự động xếp dọc trên Mobile (&lt; 768px)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
