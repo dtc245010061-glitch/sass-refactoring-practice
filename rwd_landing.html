@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Responsive</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 1. Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1e293b;
+            padding: 15px 30px;
+            color: white;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        .nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        .nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* 2. Hero Section */
+        .hero {
+            text-align: center;
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #0f172a;
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #475569;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #0284c7;
+            color: white;
+            padding: 12px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #0369a1;
+        }
+
+        /* 3. Services Section (Flexbox) */
+        .services {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .services h2 {
+            font-size: 28px;
+            color: #0f172a;
+            margin-bottom: 35px;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .service {
+            flex: 1;
+            min-width: 250px;
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+            font-weight: bold;
+            color: #0284c7;
+        }
+
+        /* 4. Testimonials */
+        .testimonials {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #f1f5f9;
+        }
+
+        .testimonials h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #0284c7;
+            flex: 1;
+            min-width: 280px;
+            font-style: italic;
+        }
+
+        /* 5. Footer */
+        .footer {
+            text-align: center;
+            padding: 25px 20px;
+            background-color: #0f172a;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        /* Media Queries (Responsive Mobile) */
+        @media (max-width: 768px) {
+            .nav ul {
+                display: none;
+            }
+            .hero {
+                padding: 60px 20px;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
+            .service-container {
+                flex-direction: column;
+            }
+            .service {
+                width: 100%;
+            }
+            .services, .testimonials {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">MyBrand</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#testimonials">Đánh giá</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Chào mừng đến với MyBrand</h1>
+        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
+        <a href="#services" class="btn">Tìm hiểu thêm</a>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="service-container">
+            <div class="service">Thiết kế website chuẩn SEO</div>
+            <div class="service">Phát triển phần mềm doanh nghiệp</div>
+            <div class="service">Marketing số &amp; Truyền thông</div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Khách hàng nói gì?</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">"Dịch vụ tuyệt vời, đội ngũ hỗ trợ rất nhiệt tình!" - Khách hàng A</div>
+            <div class="testimonial">"Tôi rất hài lòng với giải pháp từ MyBrand." - Khách hàng B</div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

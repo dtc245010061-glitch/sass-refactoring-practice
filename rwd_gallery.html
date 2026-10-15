@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Ảnh Responsive</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 10px;
+        }
+
+        p.desc {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 1. Mặc định trên màn hình lớn (> 700px): Hiển thị 4 ảnh trên 1 dòng (25%) */
+        .gallery-item {
+            width: 25%;
+            padding: 10px;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-caption {
+            padding: 12px 15px;
+            font-size: 14px;
+            text-align: center;
+            color: #475569;
+            font-weight: 500;
+        }
+
+        /* 2. Màn hình nhỏ hơn 700px: Hiển thị 2 ảnh trên 1 dòng (50%) */
+        @media only screen and (max-width: 700px) {
+            .gallery-item {
+                width: 50%;
+            }
+        }
+
+        /* 3. Màn hình nhỏ hơn 500px: Hiển thị 1 ảnh trên 1 dòng (100%) */
+        @media only screen and (max-width: 500px) {
+            .gallery-item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Bộ Sưu Tập Phong Cảnh Thiên Nhiên</h1>
+    <p class="desc">Co giãn trình duyệt: &gt;700px (4 cột) | &lt;700px (2 cột) | &lt;500px (1 cột)</p>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Núi và hồ">
+                <div class="card-caption">Hồ Trên Núi Thụy Sĩ</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511884642898-4c92249e20b6?auto=format&fit=crop&w=400&q=80" alt="Rừng thông">
+                <div class="card-caption">Rừng Thông Sương Mù</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=400&q=80" alt="Bình minh">
+                <div class="card-caption">Bình Minh Thung Lũng</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=400&q=80" alt="Cánh đồng">
+                <div class="card-caption">Cánh Đồng Hoa Cỏ</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
