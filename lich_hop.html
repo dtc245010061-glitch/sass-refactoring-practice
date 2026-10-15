@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch họp công ty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 10px 14px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        tr:hover {
+            background-color: #fafafa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lịch họp công ty</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ngày</th>
+                <th>Giờ</th>
+                <th>Nội dung cuộc họp</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">Thứ Hai (20/10)</td>
+                <td>08:30 - 09:30</td>
+                <td>Họp giao ban đầu tuần toàn công ty</td>
+            </tr>
+            <tr>
+                <td>10:00 - 11:30</td>
+                <td>Báo cáo tiến độ dự án Website SASS</td>
+            </tr>
+            <tr>
+                <td>14:00 - 16:00</td>
+                <td>Phỏng vấn ứng viên Frontend Developer</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Thứ Ba (21/10)</td>
+                <td>09:00 - 11:00</td>
+                <td>Họp với khách hàng đối tác chiến lược</td>
+            </tr>
+            <tr>
+                <td>14:30 - 15:30</td>
+                <td>Đánh giá chất lượng sản phẩm (QA Review)</td>
+            </tr>
+            <tr>
+                <td>Thứ Sáu (24/10)</td>
+                <td colspan="2" style="text-align: center; font-weight: bold; background-color: #eef7ff;">
+                    08:00 - 17:00: Hội thảo công nghệ thường niên (Cả ngày)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
