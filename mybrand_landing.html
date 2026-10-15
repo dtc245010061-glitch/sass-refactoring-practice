@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Landing Page</title>
+    <!-- Nhúng Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- 1. Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">MyBrand</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Hero Section -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container py-4">
+            <h1 class="display-4 fw-bold">Chào mừng đến với MyBrand</h1>
+            <p class="lead">Giải pháp số 1 cho doanh nghiệp của bạn</p>
+            <a href="#services" class="btn btn-light btn-lg mt-2">Khám phá ngay</a>
+        </div>
+    </header>
+
+    <!-- 3. Services Grid -->
+    <section id="services" class="container py-5">
+        <h2 class="text-center mb-4">Dịch vụ của chúng tôi</h2>
+        <div class="row g-4">
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0">
+                    <h3 class="h4">Thiết kế Web</h3>
+                    <p class="text-muted mt-2">Dịch vụ thiết kế web chuyên nghiệp và chuẩn SEO.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0">
+                    <h3 class="h4">SEO &amp; Marketing</h3>
+                    <p class="text-muted mt-2">Nâng cao vị thế và độ nhận diện thương hiệu của bạn.</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <div class="card p-4 h-100 shadow-sm border-0">
+                    <h3 class="h4">Hỗ trợ 24/7</h3>
+                    <p class="text-muted mt-2">Chúng tôi luôn sẵn sàng hỗ trợ bạn bất cứ lúc nào.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 text-muted">&copy; 2026 MyBrand. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

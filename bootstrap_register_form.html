@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản - Bootstrap Forms</title>
+    <!-- Nhúng Bootstrap 5 CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f1f5f9;
+            padding: 40px 15px;
+        }
+        .form-card {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-card">
+    <h2 class="text-center text-primary mb-2">Đăng Ký Tài Khoản</h2>
+    <p class="text-center text-muted mb-4">Vui lòng điền đầy đủ các thông tin bên dưới</p>
+
+    <form action="#" method="POST">
+        <!-- 1. Họ và tên -->
+        <div class="mb-3">
+            <label for="fullname" class="form-label font-weight-bold">Họ và tên</label>
+            <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+        </div>
+
+        <!-- 2. Email -->
+        <div class="mb-3">
+            <label for="email" class="form-label font-weight-bold">Địa chỉ Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+            <div class="form-text text-muted">Chúng tôi cam kết không chia sẻ email của bạn cho bên thứ ba.</div>
+        </div>
+
+        <!-- 3. Mật khẩu -->
+        <div class="mb-3">
+            <label for="password" class="form-label font-weight-bold">Mật khẩu</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Tối thiểu 8 ký tự" required>
+        </div>
+
+        <!-- 4. Xác nhận mật khẩu -->
+        <div class="mb-3">
+            <label for="confirm_password" class="form-label font-weight-bold">Xác nhận mật khẩu</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password" placeholder="Nhập lại mật khẩu" required>
+        </div>
+
+        <!-- 5. Giới tính (Radio Button) -->
+        <div class="mb-3">
+            <label class="form-label d-block font-weight-bold">Giới tính</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderMale" value="male" checked>
+                <label class="form-check-label" for="genderMale">Nam</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderFemale" value="female">
+                <label class="form-check-label" for="genderFemale">Nữ</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="genderOther" value="other">
+                <label class="form-check-label" for="genderOther">Khác</label>
+            </div>
+        </div>
+
+        <!-- 6. Sở thích (Checkbox) -->
+        <div class="mb-3">
+            <label class="form-label d-block font-weight-bold">Sở thích</label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="hobbyCoding" name="hobby" value="coding" checked>
+                <label class="form-check-label" for="hobbyCoding">Lập trình</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="hobbyMusic" name="hobby" value="music">
+                <label class="form-check-label" for="hobbyMusic">Âm nhạc</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="hobbySports" name="hobby" value="sports">
+                <label class="form-check-label" for="hobbySports">Thể thao</label>
+            </div>
+        </div>
+
+        <!-- 7. Quốc gia (Dropdown Select) -->
+        <div class="mb-4">
+            <label for="country" class="form-label font-weight-bold">Quốc gia</label>
+            <select class="form-select" id="country" name="country">
+                <option value="VN" selected>Việt Nam</option>
+                <option value="US">Hoa Kỳ</option>
+                <option value="JP">Nhật Bản</option>
+                <option value="KR">Hàn Quốc</option>
+            </select>
+        </div>
+
+        <!-- 8. Nút Submit -->
+        <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg shadow-sm">Đăng Ký Ngay</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
