@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8fafc;
+    padding: 30px 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: #dbeafe;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 25px;
+    min-height: 200px;
+    color: #1e40af;
+}
+
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: #dcfce7;
+    border: 1px solid #bbf7d0;
+    border-radius: 6px;
+    padding: 25px;
+    min-height: 200px;
+    color: #166534;
+}
+
+.left-column h2, .right-column h2 {
+    margin-bottom: 12px;
+}
+
+/* Xử lý xóa float bằng Clearfix */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
+}
