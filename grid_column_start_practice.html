@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-column-start</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .demo-box {
+            background: #ffffff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 17px;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .grid-base {
+            display: grid;
+            gap: 10px;
+        }
+
+        .grid-base div {
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            color: #475569;
+        }
+
+        .highlight {
+            background-color: #38bdf8 !important;
+            color: #0369a1 !important;
+        }
+
+        /* 1. auto */
+        .grid-auto {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .item-auto {
+            grid-column-start: auto;
+        }
+
+        /* 2. span n */
+        .grid-span {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .item-span {
+            grid-column-start: span 2;
+        }
+
+        /* 3. column-line */
+        .grid-line {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .item-line {
+            grid-column-start: 2; /* Bắt đầu tại đường kẻ cột số 2 */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực hành: Thuộc tính grid-column-start trong CSS</h1>
+
+    <!-- 1. auto -->
+    <div class="demo-box">
+        <h2>1. Giá trị auto (Theo luồng mặc định)</h2>
+        <div class="grid-base grid-auto">
+            <div class="highlight item-auto">Ô 1 (auto)</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+        </div>
+    </div>
+
+    <!-- 2. span n -->
+    <div class="demo-box">
+        <h2>2. Giá trị span n (grid-column-start: span 2)</h2>
+        <div class="grid-base grid-span">
+            <div class="highlight item-span">Ô 1 (span 2 cột)</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </div>
+
+    <!-- 3. column-line -->
+    <div class="demo-box">
+        <h2>3. Giá trị column-line (grid-column-start: 2)</h2>
+        <div class="grid-base grid-line">
+            <div class="highlight item-line">Ô 1 (Bắt đầu từ đường kẻ 2)</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
