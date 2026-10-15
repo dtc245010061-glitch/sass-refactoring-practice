@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS flex-wrap Property</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f9;
+            padding: 30px 20px;
+            color: #333;
+        }
+
+        .container-wrapper {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .demo-card {
+            background: #ffffff;
+            padding: 20px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            font-size: 16px;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
+
+        .box-container {
+            display: flex;
+            width: 500px;
+            gap: 10px;
+            background-color: #f8fafc;
+            padding: 10px;
+            border: 2px dashed #94a3b8;
+            border-radius: 6px;
+        }
+
+        .box-container div {
+            width: 140px;
+            padding: 20px 10px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+        }
+
+        /* 1. wrap */
+        .wrap-demo {
+            flex-wrap: wrap;
+        }
+        .wrap-demo div {
+            background-color: lightblue;
+        }
+
+        /* 2. nowrap */
+        .nowrap-demo {
+            flex-wrap: nowrap;
+        }
+        .nowrap-demo div {
+            background-color: lightgreen;
+        }
+
+        /* 3. wrap-reverse */
+        .wrap-reverse-demo {
+            flex-wrap: wrap-reverse;
+            height: 180px;
+        }
+        .wrap-reverse-demo div {
+            background-color: lightcoral;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-wrapper">
+    <h1>Thực hành: Thuộc tính flex-wrap trong CSS</h1>
+
+    <!-- 1. wrap -->
+    <div class="demo-card">
+        <h2>1. flex-wrap: wrap (Tự động xuống dòng khi không đủ chỗ)</h2>
+        <div class="box-container wrap-demo">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+    </div>
+
+    <!-- 2. nowrap -->
+    <div class="demo-card">
+        <h2>2. flex-wrap: nowrap (Mặc định - Cố định trên 1 hàng, không xuống dòng)</h2>
+        <div class="box-container nowrap-demo">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+        </div>
+    </div>
+
+    <!-- 3. wrap-reverse -->
+    <div class="demo-card">
+        <h2>3. flex-wrap: wrap-reverse (Xuống dòng nhưng đảo ngược hướng trục phụ)</h2>
+        <div class="box-container wrap-reverse-demo">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+            <div>Item 4</div>
+            <div>Item 5</div>
+            <div>Item 6</div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
