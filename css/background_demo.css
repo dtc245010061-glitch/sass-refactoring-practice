@@ -1,0 +1,66 @@
+/* 1. Thiết lập màu nền cho trang web */
+body {
+    background-color: #f7fafc;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 40px 20px;
+    color: #2d3748;
+}
+
+.page-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    color: #2b6cb0;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 16px;
+    color: #4a5568;
+    margin-bottom: 30px;
+}
+
+/* 2. Thêm ảnh nền vào khối div quan trọng */
+.featured-card {
+    background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 3. Căn giữa nội dung trong khối div và thêm lớp overlay mờ */
+.card-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-overlay h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #f6e05e;
+}
+
+.card-overlay p {
+    font-size: 16px;
+    margin: 0;
+    max-width: 500px;
+}

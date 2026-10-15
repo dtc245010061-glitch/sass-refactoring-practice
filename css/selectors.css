@@ -1,0 +1,66 @@
+/* 1. Element selector: đổi màu nền trang */
+body {
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    color: #333;
+}
+
+/* 2. ID selector: Căn giữa tiêu đề h1 */
+#main-title {
+    text-align: center;
+    color: #1a365d;
+    margin-bottom: 20px;
+}
+
+/* 3. Class selector: định dạng đoạn giới thiệu */
+.intro {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    text-align: center;
+}
+
+/* 4. Grouping & Descendant selector: Định dạng danh sách sở thích với các màu khác nhau */
+.hobby-list {
+    max-width: 350px;
+    margin: 0 auto 30px auto;
+    padding-left: 20px;
+}
+
+.hobby-list li:nth-child(1) {
+    color: #e53e3e; /* Đỏ */
+    font-weight: bold;
+}
+
+.hobby-list li:nth-child(2) {
+    color: #3182ce; /* Xanh dương */
+    font-weight: bold;
+}
+
+.hobby-list li:nth-child(3) {
+    color: #38a169; /* Xanh lá */
+    font-weight: bold;
+}
+
+/* 5. Pseudo-class (:hover): Nút bấm có hiệu ứng hover */
+.btn-action {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4f46e5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-action:hover {
+    background-color: #4338ca;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}

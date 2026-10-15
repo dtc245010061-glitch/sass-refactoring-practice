@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Danh sách trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            padding: 30px 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .section-box {
+            background: #fff;
+            padding: 20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            margin-bottom: 25px;
+        }
+        h2 {
+            color: #1e3a8a;
+            border-bottom: 2px solid #93c5fd;
+            padding-bottom: 6px;
+            margin-top: 0;
+        }
+
+        /* 2. list-style-type: square */
+        .list-square {
+            list-style-type: square;
+        }
+
+        /* 3. list-style-type: upper-roman */
+        .list-roman {
+            list-style-type: upper-roman;
+        }
+
+        /* 5. Vị trí dấu đánh dấu: outside vs inside */
+        .list-outside {
+            list-style-position: outside;
+            background-color: #eff6ff;
+            padding: 15px 30px;
+            border: 1px dashed #3b82f6;
+        }
+        .list-inside {
+            list-style-position: inside;
+            background-color: #fef3c7;
+            padding: 15px 30px;
+            border: 1px dashed #f59e0b;
+        }
+
+        /* 7 & 8. Danh sách với màu sắc, khoảng cách & thuộc tính rút gọn list-style */
+        .custom-roadmap {
+            list-style: square inside;
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 20px 25px;
+            border-radius: 8px;
+        }
+        .custom-roadmap li {
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            background-color: #334155;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .custom-roadmap li:hover {
+            background-color: #475569;
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Thực hành: Định kiểu Danh sách trong CSS</h1>
+
+    <!-- 2. Kiểu hình vuông -->
+    <div class="section-box">
+        <h2>2. Danh sách môn học (list-style-type: square)</h2>
+        <ul class="list-square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git</li>
+        </ul>
+    </div>
+
+    <!-- 3. Kiểu số La Mã -->
+    <div class="section-box">
+        <h2>3. Các bước học tập (list-style-type: upper-roman)</h2>
+        <ol class="list-roman">
+            <li>Học HTML</li>
+            <li>Học CSS</li>
+            <li>Học JavaScript</li>
+            <li>Học Git</li>
+        </ol>
+    </div>
+
+    <!-- 5. So sánh outside và inside -->
+    <div class="section-box">
+        <h2>5. So sánh Vị trí Dấu đánh dấu (list-style-position)</h2>
+        <p><strong>Outside (Mặc định - dấu nằm ngoài khối nội dung):</strong></p>
+        <ul class="list-outside">
+            <li>Mục danh sách với outside</li>
+            <li>Dấu chấm nằm bên ngoài lề</li>
+        </ul>
+
+        <p style="margin-top: 15px;"><strong>Inside (Dấu nằm cùng dòng trong khối nội dung):</strong></p>
+        <ul class="list-inside">
+            <li>Mục danh sách với inside</li>
+            <li>Dấu chấm thụt vào bên trong cùng văn bản</li>
+        </ul>
+    </div>
+
+    <!-- 8. Bài tập tổng hợp -->
+    <div class="section-box">
+        <h2>8. Lộ trình học lập trình Web (Bài tập tổng hợp)</h2>
+        <ul class="custom-roadmap">
+            <li>HTML - Xây dựng cấu trúc trang</li>
+            <li>CSS - Thiết kế giao diện và phong cách</li>
+            <li>JavaScript - Tương tác và logic trang web</li>
+            <li>Git - Quản lý phiên bản mã nguồn</li>
+            <li>GitHub - Lưu trữ và cộng tác dự án</li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>

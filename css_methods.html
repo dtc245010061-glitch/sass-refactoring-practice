@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhúng CSS vào HTML</title>
+
+    <!-- Phần 2: Internal CSS -->
+    <style>
+        .internal-box h2 {
+            color: #27ae60;
+        }
+        .internal-box p {
+            color: #2980b9;
+        }
+    </style>
+
+    <!-- Phần 3: External CSS -->
+    <link rel="stylesheet" href="css/external-style.css">
+</head>
+<body style="font-family: Arial, sans-serif; padding: 20px;">
+    <h1>Bài tập: Nhúng CSS vào trang HTML</h1>
+
+    <!-- Phần 1: Inline CSS -->
+    <div style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 6px;">
+        <h2 style="color: #e74c3c;">Phần 1: Inline Style (Tiêu đề màu đỏ)</h2>
+        <p style="color: #8e44ad; font-size: 16px;">Đoạn văn này sử dụng inline style trực tiếp trong thẻ với màu tím.</p>
+    </div>
+
+    <!-- Phần 2: Internal CSS -->
+    <div class="internal-box" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 20px; border-radius: 6px;">
+        <h2>Phần 2: Internal Style (Tiêu đề màu xanh lá)</h2>
+        <p>Đoạn văn này được định dạng bằng thẻ &lt;style&gt; trong phần &lt;head&gt; với màu xanh dương.</p>
+    </div>
+
+    <!-- Phần 3: External CSS -->
+    <div class="external-box" style="border: 1px solid #ccc; padding: 15px; border-radius: 6px;">
+        <h2>Phần 3: External Style (Tiêu đề màu cam đậm)</h2>
+        <p>Đoạn văn này được định dạng thông qua file liên kết bên ngoài (css/external-style.css) với màu xám chì.</p>
+    </div>
+</body>
+</html>
